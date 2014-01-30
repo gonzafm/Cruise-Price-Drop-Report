@@ -1,26 +1,28 @@
 @(reportList: List[Report])
 
 @main("Cruise Price Drop") {
-    <table class="table table-striped">
+    <table class="table table-striped table-hover">
         <tr>
-            <th>Cruise Id</th>
             <th>External Sailing Id</th>
+            <th>Vendor Code</th>
+            <th>Vendor Ship Code</th>
             <th>Sailing Date</th>
+            <th>Cruise Id</th>
             <th>Embarcation Port</th>
-            <th>Region Id</th>
-            <th>Ship Id</th>
+            <th>Region Code</th>
             <th>Lenght Of Cruise</th>
             <th>Vendor Name</th>
             <th>Lowest Rrice</th>
         </tr>
         @for(report <- reportList){
         <tr>
-            <td>@report.cruiseId</td>
             <td>@report.externalSailingId</td>
+            <td>@report.vendorCode</td>
+            <td>@report.shipCode</td>
             <td>@report.sailingDate</td>
+            <td>@report.cruiseId</td>
             <td>@report.embarcationPortId</td>
-            <td>@report.regionId</td>
-            <td>@report.shipId</td>
+            <td>@report.regionCode</td>
             <td>@report.lenghtOfCruise</td>
             <td>@report.vendorName</td>
             <td>@report.lowestPrice</td>
